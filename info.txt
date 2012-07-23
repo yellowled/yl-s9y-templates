@@ -1,0 +1,4 @@
+Name: TEMPLATE_NAME
+Author: Matthias Mees, mees@netzgestaltung.net
+Date: 2012-MONTH-DAY
+Require Serendipity: 1.6

@@ -8,7 +8,7 @@
     <title>{$head_title|@default:$blogTitle} {if $head_subtitle} - {$head_subtitle}{/if}</title>
     <meta name="generator" content="Serendipity v.{$head_version}">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="{$head_link_stylesheet}">
+    <link rel="stylesheet" href="{$head_link_stylesheet}">
     <script src="{serendipity_getFile file="js/modernizr-2.6.0.min.js"}"></script>
     <link rel="alternate"  type="application/rss+xml" title="{$blogTitle} RSS feed" href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/index.rss2">
     <link rel="alternate"  type="application/x.atom+xml"  title="{$blogTitle} Atom feed"  href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/atom.xml">
@@ -40,7 +40,7 @@
 
     <footer id="info">
         <small>
-            <span class="powered">Betrieben mit <a href="http://s9y.org"><span lang="en">Serendipity</span></a>.</span> 
+            <span class="powered">Betrieben mit <a href="http://s9y.org"><span lang="en">Serendipity</span></a>.</span>
             <span class="credit"><span lang="en">Template</span>: <a href="http://netzgestaltung.net">Matthias Mees</a>.</span>
         </small>
     </footer>

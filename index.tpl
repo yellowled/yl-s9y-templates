@@ -9,7 +9,7 @@
     <meta name="generator" content="Serendipity v.{$head_version}">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="{$head_link_stylesheet}">
-    <script src="{serendipity_getFile file="js/modernizr-2.6.0.min.js"}"></script>
+    <script src="{serendipity_getFile file="scripts/vendor/modernizr-2.6.2.min.js"}"></script>
     <link rel="alternate"  type="application/rss+xml" title="{$blogTitle} RSS feed" href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/index.rss2">
     <link rel="alternate"  type="application/x.atom+xml"  title="{$blogTitle} Atom feed"  href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/atom.xml">
 {if $entry_id}
@@ -44,7 +44,7 @@
             <span class="credit"><span lang="en">Template</span>: <a href="http://netzgestaltung.net">Matthias Mees</a>.</span>
         </small>
     </footer>
-<script src="{serendipity_getFile file="js/script.min.js"}"></script>
+<script src="{serendipity_getFile file="scripts/master.js"}"></script>
 {/if}
 {$raw_data}
 {serendipity_hookPlugin hook="frontend_footer"}

@@ -7,8 +7,13 @@
     <meta charset="{$head_charset}">
     <title>{$CONST.SERENDIPITY_ADMIN_SUITE}</title>
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="{$head_link_stylesheet}">
-    <script src="{serendipity_getFile file="js/modernizr-2.6.0.min.js"}"></script>
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="{serendipity_getFile file="oldie.css"}">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="{$head_link_stylesheet}">
+<!--<![endif]-->
+    <script src="{serendipity_getFile file="scripts/vendor/modernizr-2.6.2.min.js"}"></script>
 <script type="text/javascript">
 window.onload = function() {ldelim}
     parent.document.getElementById('serendipity_iframe').style.height = document.getElementById('main').offsetHeight
@@ -26,6 +31,5 @@ window.onload = function() {ldelim}
         {$preview}
         </div>
     </div>
-<script src="{serendipity_getFile file="js/script.min.js"}"></script>
 </body>
 </html>

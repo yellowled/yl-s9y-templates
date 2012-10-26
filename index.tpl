@@ -49,7 +49,8 @@
             <span class="credit"><span lang="en">Template</span>: <a href="http://netzgestaltung.net">Matthias Mees</a>.</span>
         </small>
     </footer>
-<script src="{serendipity_getFile file="scripts/master.js"}"></script>
+
+    <script src="{serendipity_getFile file="scripts/master.js"}"></script>
 {/if}
 {$raw_data}
 {serendipity_hookPlugin hook="frontend_footer"}

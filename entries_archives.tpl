@@ -3,7 +3,7 @@
     <h2>{$CONST.ARCHIVES}</h2>
 
 {foreach from=$archives item="archive"}
-    <section class="year clearfix {cycle values="odd,even"}">
+    <section class="clearfix {cycle values="odd,even"} year">
         <h3>{$archive.year}</h3>
 
         <ul class="plainList">

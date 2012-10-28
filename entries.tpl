@@ -108,14 +108,21 @@
     <p class="nocontent">{$CONST.NO_ENTRIES_TO_PRINT}</p>
     {/if}
 {/foreach}
-{if $footer_prev_page or $footer_next_page}
-    <nav class="serendipity_pagination">
-        <h2{if not $footer_info} class="visuallyhidden"{/if}>{$footer_info}</h2>
+{if not $is_preview}
+    {if $staticpage_pagetitle == ''}
+    <nav id="pagination">
+        <div class="clearfix container">
+            <h2 class="visuallyhidden">Artikelnavigation</h2>
 
-        <ul class="clearfix">
-            <li class="prev">{if $footer_prev_page}<a href="{$footer_prev_page}">{/if}{if $footer_prev_page}{$CONST.PREVIOUS_PAGE}{else}&nbsp;{/if}{if $footer_prev_page}</a>{/if}</li>
-            <li class="next">{if $footer_next_page}<a href="{$footer_next_page}">{/if}{if $footer_next_page}{$CONST.NEXT_PAGE}{else}&nbsp;{/if}{if $footer_next_page}</a>{/if}</li>
-        </ul>
+            <p class="visuallyhidden">{$footer_info}</p>
+        {if $footer_prev_page||$footer_next_page}
+            <ul class="clearfix">
+                <li class="prev-page">{if $footer_prev_page}<a href="{$footer_prev_page}">{$CONST.PREVIOUS_PAGE}</a>{else}<span class="invisible">{$CONST.NO_ENTRIES_TO_PRINT}</span>{/if}</li>
+                <li class="next-page">{if $footer_next_page}<a href="{$footer_next_page}">{$CONST.NEXT_PAGE}</a>{else}<span class="invisible">{$CONST.NO_ENTRIES_TO_PRINT}</span>{/if}</li>
+            </ul>
+        {/if}
+        </div>
     </nav>
+    {/if}
 {/if}
 {serendipity_hookPlugin hook="entries_footer"}

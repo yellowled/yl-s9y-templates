@@ -1,14 +1,12 @@
 <article id="page-{$staticpage_pagetitle|@makeFilename}" class="clearfix page">
-    <header>
-        <h2>{if $staticpage_articleformat}{if $staticpage_articleformattitle}{$staticpage_articleformattitle|@escape}{else}{$staticpage_pagetitle}{/if}{else}{if $staticpage_headline}{$staticpage_headline|@escape}{else}{$staticpage_pagetitle}{/if}{/if}</h2>
-    {if is_array($staticpage_childpages)}
-        <ul id="staticpage_childpages">
-            {foreach from=$staticpage_childpages item="childpage"}
-            <li><a href="{$childpage.permalink|@escape}" title="{$childpage.pagetitle|@escape}">{$childpage.pagetitle|@escape}</a></li>
-            {/foreach}
-        </ul>
-    {/if}
-    </header>
+    <h2>{if $staticpage_articleformat}{if $staticpage_articleformattitle}{$staticpage_articleformattitle|@escape}{else}{$staticpage_pagetitle}{/if}{else}{if $staticpage_headline}{$staticpage_headline|@escape}{else}{$staticpage_pagetitle}{/if}{/if}</h2>
+{if is_array($staticpage_childpages)}
+    <ul id="staticpage_childpages">
+    {foreach from=$staticpage_childpages item="childpage"}
+        <li><a href="{$childpage.permalink|@escape}" title="{$childpage.pagetitle|@escape}">{$childpage.pagetitle|@escape}</a></li>
+    {/foreach}
+    </ul>
+{/if}
 {if $staticpage_pass AND $staticpage_form_pass != $staticpage_pass}
     <form class="staticpage_password_form" action="{$staticpage_form_url}" method="post">
     <fieldset>

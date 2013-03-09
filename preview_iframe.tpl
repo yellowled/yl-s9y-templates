@@ -28,9 +28,9 @@ window.onload = function() {ldelim}
 </head>
 <body style="padding: 0; margin: 0;">
     <div id="main" class="clearfix" style="padding: 0; margin: 5px auto; width: 98%;">
-        <div id="content" class="clearfix">
+        <main>
         {$preview}
-        </div>
+        </main>
     </div>
 </body>
 </html>

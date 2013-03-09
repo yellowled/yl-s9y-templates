@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="{$lang}"> <!--<![endif]-->
 <head>
     <meta charset="{$head_charset}">
-    <title>{$head_title|@default:$blogTitle} {if $head_subtitle} - {$head_subtitle}{/if}</title>
+    <title>{$head_title|@default:$blogTitle}{if $head_subtitle} | {$head_subtitle}{/if}</title>
     <meta name="generator" content="Serendipity v.{$head_version}">
     <meta name="viewport" content="width=device-width">
 <!--[if lte IE 8]>
@@ -27,15 +27,15 @@
 {serendipity_hookPlugin hook="frontend_header"}
 {/if}
 {if $is_raw_mode != true}
-    <header id="head" class="clearfix">
+    <header>
         <h1><a href="{$serendipityBaseURL}">{$blogTitle}</a></h1>
         <span>{$blogDescription}</span>
     </header>
 
-    <div id="main" class="clearfix">
-        <div id="content" class="clearfix">
+    <div class="clearfix">
+        <main>
         {$CONTENT}
-        </div>
+        </main>
 
         <aside>
         {if $leftSidebarElements > 0}{serendipity_printSidebar side="left"}{/if}
@@ -43,11 +43,11 @@
         </aside>
     </div>
 
-    <footer id="info">
-        <small>
-            <span class="powered">Betrieben mit <a href="http://s9y.org"><span lang="en">Serendipity</span></a>.</span>
-            <span class="credit"><span lang="en">Template</span>: <a href="http://netzgestaltung.net">Matthias Mees</a>.</span>
-        </small>
+    <footer>
+        <p>
+            <small class="powered">Betrieben mit <a href="http://s9y.org"><span lang="en">Serendipity</span></a>.</small>
+            <small class="credit"><span lang="en">Template</span>: <a href="http://netzgestaltung.net">Matthias Mees</a>.</small>
+        </p>
     </footer>
 
     <script src="{serendipity_getFile file="scripts/master.js"}"></script>

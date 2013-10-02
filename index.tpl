@@ -15,7 +15,7 @@
 <!--[if gt IE 8]><!-->
     <link rel="stylesheet" href="{$head_link_stylesheet}">
 <!--<![endif]-->
-    <script src="{serendipity_getFile file="scripts/vendor/modernizr-2.6.2.min.js"}"></script>
+    <script src="{serendipity_getFile file="scripts/modernizr/modernizr.js"}"></script>
     <link rel="alternate" type="application/rss+xml" title="{$blogTitle} RSS feed" href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/index.rss2">
     <link rel="alternate" type="application/x.atom+xml" title="{$blogTitle} Atom feed" href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/atom.xml">
 {if $entry_id}

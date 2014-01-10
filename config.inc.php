@@ -2,29 +2,39 @@
 if (IN_serendipity !== true) { die ("Don't hack!"); }
 
 @serendipity_plugin_api::load_language(dirname(__FILE__));
+
 $serendipity['smarty']->assign(array('currpage'  => "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'],
                                      'currpage2' => $_SERVER['REQUEST_URI']));
-function serendipity_smarty_html5time($timestamp) { return date("c", $timestamp); }
+
+function serendipity_smarty_html5time($timestamp) {
+    return date("c", $timestamp);
+}
+
 if( defined('Smarty::SMARTY_VERSION') ) {
-   $serendipity['smarty']->registerPlugin('modifier', 'serendipity_html5time', 'serendipity_smarty_html5time');
+    $serendipity['smarty']->registerPlugin('modifier', 'serendipity_html5time', 'serendipity_smarty_html5time');
 } else {
-   // old Smarty 2 syntax
-   $serendipity['smarty']->register_modifier('serendipity_html5time', 'serendipity_smarty_html5time');
+    // old Smarty 2 syntax
+    $serendipity['smarty']->register_modifier('serendipity_html5time', 'serendipity_smarty_html5time');
 }
+
 if (class_exists('serendipity_event_spamblock')) {
-  $required_fieldlist = serendipity_db_query("SELECT value FROM {$serendipity['dbPrefix']}config WHERE name LIKE '%spamblock%required_fields'", true, 'assoc');
+    $required_fieldlist = serendipity_db_query("SELECT value FROM {$serendipity['dbPrefix']}config WHERE name LIKE '%spamblock%required_fields'", true, 'assoc');
 } elseif (class_exists('serendipity_event_commentspice')) {
-  $required_fieldlist = serendipity_db_query("SELECT value FROM {$serendipity['dbPrefix']}config WHERE name LIKE '%commentspice%required_fields'", true, 'assoc');
+    $required_fieldlist = serendipity_db_query("SELECT value FROM {$serendipity['dbPrefix']}config WHERE name LIKE '%commentspice%required_fields'", true, 'assoc');
 }
+
 if (is_array($required_fieldlist)) {
-  $required_fields = explode(',', $required_fieldlist['value']);
-  $smarty_required_fields = array();
-  foreach($required_fields AS $required_field) {
-    $required_field = trim($required_field);
-    if (empty($required_field)) continue;
-    $smarty_required_fields[$required_field] = $required_field;
-  }
-  $serendipity['smarty']->assign('required_fields', $smarty_required_fields);
+    $required_fields = explode(',', $required_fieldlist['value']);
+    $smarty_required_fields = array();
+
+    foreach($required_fields AS $required_field) {
+        $required_field = trim($required_field);
+
+        if (empty($required_field)) continue;
+            $smarty_required_fields[$required_field] = $required_field;
+        }
+
+    $serendipity['smarty']->assign('required_fields', $smarty_required_fields);
 }
 
 $template_config = array(

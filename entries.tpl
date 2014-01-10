@@ -6,7 +6,7 @@
         <header class="clearfix">
             <h2><a href="{$entry.link}">{$entry.title}</a></h2>
 
-            <span class="serendipity_byline">{$CONST.POSTED_BY} <a href="{$entry.link_author}">{$entry.author}</a> {$CONST.ON} <time datetime="{$entry.timestamp|@serendipity_html5time}" pubdate>{$entry.timestamp|@formatTime:"%d.%m.%Y"}</time></span>
+            <span class="serendipity_byline">{$CONST.POSTED_BY} <a href="{$entry.link_author}">{$entry.author}</a> {$CONST.ON} <time datetime="{$entry.timestamp|@serendipity_html5time}">{$entry.timestamp|@formatTime:"%d.%m.%Y"}</time></span>
         </header>
 
         <div class="clearfix content serendipity_entry_body">

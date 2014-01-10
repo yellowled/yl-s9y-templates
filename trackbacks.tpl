@@ -1,6 +1,6 @@
 {foreach from=$trackbacks item=trackback}
     <article id="c{$trackback.id}" class="clearfix serendipity_trackback">
-        <h4><cite>{$trackback.author|@default:$CONST.ANONYMOUS}</cite> {$CONST.ON} <time datetime="{$trackback.timestamp|@serendipity_html5time}" pubdate>{$trackback.timestamp|@formatTime:"%d.%m.%Y"}</time>: <a href="{$trackback.url|@strip_tags}">{$trackback.title}</a></h4>
+        <h4><cite>{$trackback.author|@default:$CONST.ANONYMOUS}</cite> {$CONST.ON} <time datetime="{$trackback.timestamp|@serendipity_html5time}">{$trackback.timestamp|@formatTime:"%d.%m.%Y"}</time>: <a href="{$trackback.url|@strip_tags}">{$trackback.title}</a></h4>
 	{if $trackback.body == ''}
 		<span class="visuallyhidden">{$CONST.NO_ENTRIES_TO_PRINT}</span>
 	{else}

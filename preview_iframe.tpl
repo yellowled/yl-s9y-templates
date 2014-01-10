@@ -13,7 +13,7 @@
 <!--[if gt IE 8]><!-->
     <link rel="stylesheet" href="{$head_link_stylesheet}">
 <!--<![endif]-->
-    <script src="{serendipity_getFile file="scripts/vendor/modernizr-2.6.2.min.js"}"></script>
+    <script src="{serendipity_getFile file="scripts/modernizr/modernizr.js"}"></script>
 <script type="text/javascript">
 window.onload = function() {ldelim}
     parent.document.getElementById('serendipity_iframe').style.height = document.getElementById('main').offsetHeight

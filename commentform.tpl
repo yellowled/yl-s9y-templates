@@ -7,27 +7,27 @@
     <form id="serendipity_comment" action="{$commentform_action}#feedback" method="post">
         <input type="hidden" name="serendipity[entry_id]" value="{$commentform_id}">
 
-        <div class="clearfix form-field">
+        <div class="form-field">
             <label for="serendipity_commentform_name">{$CONST.NAME}</label>
             <input id="serendipity_commentform_name" type="text" name="serendipity[name]" value="{$commentform_name}">
         </div>
 
-        <div class="clearfix form-field">
+        <div class="form-field">
             <label for="serendipity_commentform_email">{$CONST.EMAIL}</label>
             <input id="serendipity_commentform_email" type="email" name="serendipity[email]" value="{$commentform_email}">
         </div>
 
-        <div class="clearfix form-field">
+        <div class="form-field">
             <label for="serendipity_commentform_url">{$CONST.HOMEPAGE}</label>
             <input id="serendipity_commentform_url" type="text" name="serendipity[url]" value="{$commentform_url}">
         </div>
 
-        <div class="clearfix form-select">
+        <div class="form-select">
             <label for="serendipity_replyTo">{$CONST.IN_REPLY_TO}</label>
             {$commentform_replyTo}
         </div>
 
-        <div class="clearfix form-area">
+        <div class="form-area">
             <label for="serendipity_commentform_comment">{$CONST.COMMENT}</label>
             <textarea id="serendipity_commentform_comment" rows="10" name="serendipity[comment]">{$commentform_data}</textarea>
         </div>

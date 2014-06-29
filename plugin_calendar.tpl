@@ -1,4 +1,4 @@
-<table class="serendipity_calendar">
+<table class="calendar">
 <thead>
     <tr>
     {foreach from=$plugin_calendar_dow item="dow"}
@@ -10,15 +10,15 @@
     <tr>
         <td class="prev">
         {if $plugin_calendar_head.minScroll le $plugin_calendar_head.month_date}
-        <a href="{$plugin_calendar_head.uri_previous}">&larr;<span class="visuallyhidden"> {$CONST.BACK}</span></a>
+        <a href="{$plugin_calendar_head.uri_previous}">&larr;<span> {$CONST.BACK}</span></a>
         {/if}
         </td>
-        <td class="current_month" colspan="5">
+        <td class="month" colspan="5">
             <a href="{$plugin_calendar_head.uri_month}">{$plugin_calendar_head.month_date|formatTime:"%B '%y":false}</a>
         </td>
         <td class="next">
         {if $plugin_calendar_head.maxScroll ge $plugin_calendar_head.month_date}
-        <a href="{$plugin_calendar_head.uri_next}"><span class="visuallyhidden">{$CONST.FORWARD} </span>&rarr;</a>
+        <a href="{$plugin_calendar_head.uri_next}"><span>{$CONST.FORWARD} </span>&rarr;</a>
         {/if}
         </td>
     </tr>

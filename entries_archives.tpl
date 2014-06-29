@@ -3,10 +3,10 @@
     <h2>{$CONST.ARCHIVES}</h2>
 
 {foreach from=$archives item="archive"}
-    <section class="year {cycle values="odd,even"}">
+    <section class="{cycle values="odd,even"}">
         <h3>{$archive.year}</h3>
 
-        <ul class="plainList">
+        <ul class="year">
         {foreach from=$archive.months item="month"}
             <li class="month">
                 <span class="date">{if $month.entry_count}<a href="{$month.link}" title="{$CONST.VIEW_FULL}">{/if}{$month.date|@formatTime:"%B"}{if $month.entry_count}</a>{/if}:</span>

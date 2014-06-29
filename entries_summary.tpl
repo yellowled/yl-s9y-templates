@@ -1,8 +1,8 @@
 {serendipity_hookPlugin hook="entries_header"}
-<article id="archives" class="clearfix">
+<article id="archives">
 	<h2>{$CONST.TOPICS_OF} {$dateRange.0|@formatTime:"%B %Y"}</h2>
 
-	<ul class="summary clearfix plainList">
+	<ul class="summary">
 	{foreach from=$entries item="sentries"}
         {foreach from=$sentries.entries item="entry"}
         <li><a href="{$entry.link}">{$entry.title}</a>

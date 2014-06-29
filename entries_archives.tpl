@@ -1,9 +1,9 @@
 {serendipity_hookPlugin hook="entries_header"}
-<article id="archives" class="clearfix">
+<article id="archives">
     <h2>{$CONST.ARCHIVES}</h2>
 
 {foreach from=$archives item="archive"}
-    <section class="clearfix {cycle values="odd,even"} year">
+    <section class="year {cycle values="odd,even"}">
         <h3>{$archive.year}</h3>
 
         <ul class="plainList">

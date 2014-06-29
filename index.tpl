@@ -33,20 +33,18 @@
         <span>{$blogDescription}</span>
     </header>
 
-    <div class="clearfix">
-        <main>
-        {$CONTENT}
-        </main>
+    <main>
+    {$CONTENT}
+    </main>
 
-        <aside>
-        {if $leftSidebarElements > 0}{serendipity_printSidebar side="left"}{/if}
-        {if $rightSidebarElements > 0}{serendipity_printSidebar side="right"}{/if}
-        </aside>
-    </div>
+    <aside>
+    {if $leftSidebarElements > 0}{serendipity_printSidebar side="left"}{/if}
+    {if $rightSidebarElements > 0}{serendipity_printSidebar side="right"}{/if}
+    </aside>
 
     <footer>
-        <p><span class="powered">Betrieben mit <a href="http://s9y.org"><span lang="en">Serendipity</span></a>.</span>
-           <span class="credit"><span lang="en">Template</span>: <a href="http://netzgestaltung.net">Matthias Mees</a>.</span></p>
+        <span class="sys" lang="en">Powered by <a href="http://s9y.org">Serendipity</a></span>
+        <span class="tpl" lang="en">Template</span> by <a href="http://netzgestaltung.net">Matthias Mees</a></span>
     </footer>
 
     <script src="{serendipity_getFile file="scripts/master.js"}"></script>

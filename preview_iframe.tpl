@@ -32,5 +32,7 @@ window.onload = function() {ldelim}
         {$preview}
         </main>
     </div>
+
+    <script src="{serendipity_getFile file="scripts/master.js"}"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
 Name: TEMPLATE_NAME
-Author: Matthias Mees, mees@netzgestaltung.net
+Author: Matthias Mees, mm@yellowled.de
 Date: 2014-MONTH-DAY
 Require Serendipity: 1.7

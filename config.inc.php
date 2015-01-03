@@ -6,15 +6,17 @@ if (IN_serendipity !== true) { die ("Don't hack!"); }
 $serendipity['smarty']->assign(array('currpage'  => "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'],
                                      'currpage2' => $_SERVER['REQUEST_URI']));
 
-function serendipity_smarty_html5time($timestamp) {
-    return date("c", $timestamp);
-}
+if (!function_exists('serendipity_smarty_html5time')) {
+    function serendipity_smarty_html5time($timestamp) {
+        return date("c", $timestamp);
+    }
 
-if( defined('Smarty::SMARTY_VERSION') ) {
-    $serendipity['smarty']->registerPlugin('modifier', 'serendipity_html5time', 'serendipity_smarty_html5time');
-} else {
-    // old Smarty 2 syntax
-    $serendipity['smarty']->register_modifier('serendipity_html5time', 'serendipity_smarty_html5time');
+    if( defined('Smarty::SMARTY_VERSION') ) {
+        $serendipity['smarty']->registerPlugin('modifier', 'serendipity_html5time', 'serendipity_smarty_html5time');
+    } else {
+        // old Smarty 2 syntax
+        $serendipity['smarty']->register_modifier('serendipity_html5time', 'serendipity_smarty_html5time');
+    }
 }
 
 if (class_exists('serendipity_event_spamblock')) {
@@ -49,3 +51,7 @@ $template_config = array(
 $template_global_config = array('navigation' => true);
 $template_loaded_config = serendipity_loadThemeOptions($template_config, $serendipity['smarty_vars']['template_option'], true);
 serendipity_loadGlobalThemeOptions($template_config, $template_loaded_config, $template_global_config);
+
+if ($_SESSION['serendipityUseTemplate']) {
+    $template_loaded_config['use_corenav'] = false;
+}

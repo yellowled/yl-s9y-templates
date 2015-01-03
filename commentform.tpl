@@ -19,7 +19,7 @@
 
         <div class="form-field">
             <label for="serendipity_commentform_url">{$CONST.HOMEPAGE}</label>
-            <input id="serendipity_commentform_url" type="text" name="serendipity[url]" value="{$commentform_url}">
+            <input id="serendipity_commentform_url" type="url" name="serendipity[url]" value="{$commentform_url}">
         </div>
 
         <div class="form-select">

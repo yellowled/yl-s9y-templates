@@ -6,7 +6,7 @@
     {if $item.title != ""}
     	<h3>{$item.title}</h3>
 	{/if}
-        <div class="widget-body">
+        <div class="widget_content">
     	{$item.content}
     	</div>
     </section>

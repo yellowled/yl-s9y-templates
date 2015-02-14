@@ -6,10 +6,10 @@
 	{else}
         <details>
             <summary>{$CONST.VIEW_EXTENDED_ENTRY|@sprintf:$trackback.title}</summary>
-            <div class="trackback-body">{$trackback.body|@strip_tags|@escape:all}</div>
+            <div class="trackback_content">{$trackback.body|@strip_tags|@escape:all}</div>
         </details>
     {/if}
     </article>
 {foreachelse}
-    <p class="no-content">{$CONST.NO_TRACKBACKS}</p>
+    <p class="serendipity_msg_notice">{$CONST.NO_TRACKBACKS}</p>
 {/foreach}

@@ -8,15 +8,15 @@
 </thead>
 <tfoot>
     <tr>
-        <td class="prev">
+        <td class="prev_month">
         {if $plugin_calendar_head.minScroll le $plugin_calendar_head.month_date}
         <a href="{$plugin_calendar_head.uri_previous}">&larr;<span> {$CONST.BACK}</span></a>
         {/if}
         </td>
-        <td class="month" colspan="5">
+        <td class="current_month" colspan="5">
             <a href="{$plugin_calendar_head.uri_month}">{$plugin_calendar_head.month_date|formatTime:"%B '%y":false}</a>
         </td>
-        <td class="next">
+        <td class="next_month">
         {if $plugin_calendar_head.maxScroll ge $plugin_calendar_head.month_date}
         <a href="{$plugin_calendar_head.uri_next}"><span>{$CONST.FORWARD} </span>&rarr;</a>
         {/if}

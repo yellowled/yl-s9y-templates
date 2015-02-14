@@ -1,4 +1,4 @@
-<aside id="search-pages">
+<aside id="search_pages">
     <h3>{$CONST.STATICPAGE_SEARCHRESULTS|sprintf:$staticpage_searchresults}</h3>
     {if $staticpage_results}
     <ul>
@@ -8,6 +8,6 @@
     {/foreach}
     </ul>
     {else}
-    <p class="no-content">{$CONST.NO_ENTRIES_TO_PRINT}</p>
+    <p class="serendipity_msg_notice">{$CONST.NO_ENTRIES_TO_PRINT}</p>
     {/if}
 </aside>

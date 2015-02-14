@@ -6,13 +6,14 @@
     <meta charset="{$head_charset}">
     <title>{$CONST.SERENDIPITY_ADMIN_SUITE}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{$serendipityHTTPPath}{$serendipityRewritePrefix}serendipity.css">
 <!--[if lte IE 8]>
     <link rel="stylesheet" href="{serendipity_getFile file="oldie.css"}">
 <![endif]-->
-<!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="{$head_link_stylesheet}">
-<!--<![endif]-->
     <script src="{serendipity_getFile file="scripts/modernizr/modernizr.js"}"></script>
+{serendipity_hookPlugin hook="backend_header" hookAll="true"}
+    <script src="{serendipity_getFile file='admin/js/plugins.js'}"></script>
+    <script src="{serendipity_getFile file='admin/serendipity_editor.js'}"></script>
 <script type="text/javascript">
 window.onload = function() {ldelim}
     parent.document.getElementById('serendipity_iframe').style.height = document.getElementById('main').offsetHeight

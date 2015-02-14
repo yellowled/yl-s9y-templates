@@ -34,7 +34,7 @@
             <span>{$CONST.POSTED_BY} {$staticpage_author|escape}</span>
         {/if}
         {if $staticpage_lastchange}
-            <span>{$CONST.ON} <time datetime="{$staticpage_lastchange|serendipity_html5time}">{$staticpage_lastchange|date_format:"%d.%m.%Y"}</time></span>
+            <span>{$CONST.ON} <time datetime="{$staticpage_lastchange|serendipity_html5time}">{$staticpage_lastchange|date_format:$template_option.date_format}</time></span>
         {/if}
         </small>
     </footer>

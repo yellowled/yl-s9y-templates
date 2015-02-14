@@ -4,7 +4,7 @@
     <ul>
     {foreach from=$staticpage_results item="result"}
         <li><h4><a href="{$result.permalink|escape}" title="{$result.pagetitle|escape}">{$result.headline}</a> ({$result.realname})</h4>
-            <div class="content">{$result.content|strip_tags|truncate:200:" ... "}</div>
+            <div class="content">{$result.content|strip_tags|truncate:200:"..."}</div>
         </li>
     {/foreach}
     </ul>

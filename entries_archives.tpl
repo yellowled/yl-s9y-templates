@@ -1,5 +1,5 @@
 {serendipity_hookPlugin hook="entries_header"}
-<article id="archives">
+<article class="archives">
     <h2>{$CONST.ARCHIVES}</h2>
 
 {foreach from=$archives item="archive"}

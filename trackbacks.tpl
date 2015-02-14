@@ -6,7 +6,7 @@
 	{else}
         <details>
             <summary>{$CONST.VIEW_EXTENDED_ENTRY|@sprintf:$trackback.title}</summary>
-            <div class="trackback_content">{$trackback.body|@strip_tags|@escape:all}</div>
+            <div class="content">{$trackback.body|@strip_tags|@escape:all}</div>
         </details>
     {/if}
     </article>

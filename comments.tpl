@@ -2,7 +2,7 @@
     <article id="c{$comment.id}" class="comment {cycle values="odd, even"}{if $comment.depth > 8} commentlevel_9{else} commentlevel_{$comment.depth}{/if}">
         <h4>{if $comment.url}<a href="{$comment.url}">{/if}{$comment.author|@default:$CONST.ANONYMOUS}{if $comment.url}</a>{/if} {$CONST.ON} <time datetime="{$comment.timestamp|@serendipity_html5time}">{$comment.timestamp|@formatTime:"%d.%m.%Y"}</time>:</h4>
 
-        <div class="comment_body">
+        <div class="content">
         {if $comment.body == 'COMMENT_DELETED'}
             <p>{$CONST.COMMENT_IS_DELETED}</p>
         {else}

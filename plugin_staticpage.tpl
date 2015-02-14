@@ -1,7 +1,7 @@
 <article id="page_{$staticpage_pagetitle|@makeFilename}" class="page">
     <h2>{if $staticpage_articleformat}{if $staticpage_articleformattitle}{$staticpage_articleformattitle|@escape}{else}{$staticpage_pagetitle}{/if}{else}{if $staticpage_headline}{$staticpage_headline|@escape}{else}{$staticpage_pagetitle}{/if}{/if}</h2>
 {if is_array($staticpage_childpages)}
-    <ul id="child_pages">
+    <ul class="child_pages">
     {foreach from=$staticpage_childpages item="childpage"}
         <li><a href="{$childpage.permalink|@escape}" title="{$childpage.pagetitle|@escape}">{$childpage.pagetitle|@escape}</a></li>
     {/foreach}
@@ -31,10 +31,10 @@
     <footer class="page_info">
         <small>
         {if $staticpage_author}
-            <span>{$CONST.POSTED_BY} </span>{$staticpage_author|@escape}
+            <span>{$CONST.POSTED_BY} {$staticpage_author|@escape}</span>
         {/if}
         {if $staticpage_lastchange}
-            | <span>{$CONST.ON} </span><time datetime="{$staticpage_lastchange|@serendipity_html5time}">{$staticpage_lastchange|date_format:"%d.%m.%Y"}</time>
+            <span>{$CONST.ON} <time datetime="{$staticpage_lastchange|@serendipity_html5time}">{$staticpage_lastchange|date_format:"%d.%m.%Y"}</time></span>
         {/if}
         </small>
     </footer>

@@ -1,4 +1,4 @@
-<aside id="search_pages">
+<aside class="search_pages">
     <h3>{$CONST.STATICPAGE_SEARCHRESULTS|sprintf:$staticpage_searchresults}</h3>
     {if $staticpage_results}
     <ul>

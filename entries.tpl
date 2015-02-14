@@ -2,7 +2,7 @@
 {foreach from=$entries item="dategroup"}
     {foreach from=$dategroup.entries item="entry"}
     {assign var="entry" value=$entry scope=parent}
-    <article id="post_{$entry.id}" class="post{if $dategroup.is_sticky} sticky{/if}">
+    <article class="post{if $dategroup.is_sticky} is_sticky{/if}">
         <header>
             <h2><a href="{$entry.link}">{$entry.title}</a></h2>
 
@@ -111,7 +111,7 @@
 {/foreach}
 {if not $is_preview}
     {if $staticpage_pagetitle == ''}
-    <nav id="pagination">
+    <nav class="pagination">
         <h2>{$footer_info}</h2>
     {if $footer_prev_page||$footer_next_page}
         <ul>

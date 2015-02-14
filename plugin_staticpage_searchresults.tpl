@@ -3,8 +3,9 @@
     {if $staticpage_results}
     <ul>
     {foreach from=$staticpage_results item="result"}
-        <li><span><a href="{$result.permalink|@escape}" title="{$result.pagetitle|@escape}">{$result.headline}</a> ({$result.realname})</span>
-            {$result.content|@strip_tags|@strip|@truncate:200:" ... "}</li>
+        <li><h4><a href="{$result.permalink|escape}" title="{$result.pagetitle|escape}">{$result.headline}</a> ({$result.realname})</h4>
+            <div class="content">{$result.content|strip_tags|truncate:200:" ... "}</div>
+        </li>
     {/foreach}
     </ul>
     {else}

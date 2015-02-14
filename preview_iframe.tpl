@@ -27,7 +27,7 @@ window.onload = function() {ldelim}
 <style type="text/css">#serendipity_preview_spacer {ldelim}float:none!important;height:0!important;{rdelim}</style>
 </head>
 <body style="padding: 0; margin: 0;">
-    <div id="main" class="clearfix" style="padding: 0; margin: 5px auto; width: 98%;">
+    <div id="main" style="padding: 0; margin: 0 auto; width: 98%;">
         <main>
         {$preview}
         </main>

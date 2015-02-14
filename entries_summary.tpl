@@ -1,12 +1,12 @@
 {serendipity_hookPlugin hook="entries_header"}
 <article class="archives">
-	<h2>{$CONST.TOPICS_OF} {$dateRange.0|@formatTime:"%B %Y"}</h2>
+	<h2>{$CONST.TOPICS_OF} {$dateRange.0|formatTime:"%B %Y"}</h2>
 
 	<ul class="summary">
 	{foreach from=$entries item="sentries"}
         {foreach from=$sentries.entries item="entry"}
         <li><a href="{$entry.link}">{$entry.title}</a>
-            <span class="byline">{$CONST.POSTED_BY} <a href="{$entry.link_author}">{$entry.author}</a> {$CONST.ON} <time datetime="{$entry.timestamp|@serendipity_html5time}">{$entry.timestamp|@formatTime:"%d.%m.%Y"}</time></span>
+            <span class="byline">{$CONST.POSTED_BY} <a href="{$entry.link_author}">{$entry.author}</a> {$CONST.ON} <time datetime="{$entry.timestamp|serendipity_html5time}">{$entry.timestamp|formatTime:"%d.%m.%Y"}</time></span>
         </li>
         {/foreach}
     {/foreach}

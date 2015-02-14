@@ -46,7 +46,7 @@ $template_config = array(
     ),
     array(
        'var' => 'use_corenav',
-       'name' => 'Navigation einbinden?',
+       'name' => USE_CORENAV,
        'type' => 'boolean',
        'default' => true
     )

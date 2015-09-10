@@ -1,15 +1,12 @@
 {if $is_embedded != true}
-<!doctype html>
-<!--[if IE 8 ]>    <html class="no-js lt-ie9" lang="{$lang}"> <![endif]-->
+<!DOCTYPE html>
+<!--[if IE 8 ]> <html class="no-js lt-ie9" lang="{$lang}"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="{$lang}"> <!--<![endif]-->
 <head>
     <meta charset="{$head_charset}">
-    <title>{$CONST.SERENDIPITY_ADMIN_SUITE}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{$CONST.SERENDIPITY_ADMIN_SUITE}</title>
     <link rel="stylesheet" href="{$serendipityHTTPPath}{$serendipityRewritePrefix}serendipity.css">
-<!--[if lte IE 8]>
-    <link rel="stylesheet" href="{serendipity_getFile file="oldie.css"}">
-<![endif]-->
     <script src="{serendipity_getFile file="scripts/modernizr/modernizr.js"}"></script>
 {serendipity_hookPlugin hook="backend_header" hookAll="true"}
     <script src="{serendipity_getFile file='admin/js/plugins.js'}"></script>

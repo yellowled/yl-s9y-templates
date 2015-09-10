@@ -1,16 +1,13 @@
 {if $is_embedded != true}
-<!doctype html>
-<!--[if IE 8 ]>    <html class="no-js lt-ie9" lang="{$lang}"> <![endif]-->
+<!DOCTYPE html>
+<!--[if IE 8 ]> <html class="no-js lt-ie9" lang="{$lang}"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="{$lang}"> <!--<![endif]-->
 <head>
     <meta charset="{$head_charset}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{$head_title|default:$blogTitle}{if $head_subtitle} | {$head_subtitle}{/if}</title>
     <meta name="generator" content="Serendipity v.{$head_version}">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{$head_link_stylesheet}">
-<!--[if lte IE 8]>
-    <link rel="stylesheet" href="{serendipity_getFile file="oldie.css"}">
-<![endif]-->
     <script src="{serendipity_getFile file="scripts/modernizr/modernizr.js"}"></script>
     <link rel="alternate" type="application/rss+xml" title="{$blogTitle} RSS feed" href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/index.rss2">
     <link rel="alternate" type="application/x.atom+xml" title="{$blogTitle} Atom feed" href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/atom.xml">
@@ -18,6 +15,9 @@
     <link rel="pingback" href="{$serendipityBaseURL}comment.php?type=pingback&amp;entry_id={$entry_id}">
 {/if}
 {serendipity_hookPlugin hook="frontend_header"}
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
 </head>
 <body>
 {else}

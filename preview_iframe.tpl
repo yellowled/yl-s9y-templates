@@ -1,7 +1,6 @@
 {if $is_embedded != true}
 <!DOCTYPE html>
-<!--[if IE 8 ]> <html class="no-js lt-ie9" lang="{$lang}"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="{$lang}"> <!--<![endif]-->
+<html class="no-js" lang="{$lang}">
 <head>
     <meta charset="{$head_charset}">
     <meta name="viewport" content="width=device-width, initial-scale=1">

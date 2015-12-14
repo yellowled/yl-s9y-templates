@@ -1,7 +1,6 @@
 {if $is_embedded != true}
 <!DOCTYPE html>
-<!--[if IE 8 ]> <html class="no-js lt-ie9" lang="{$lang}"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="{$lang}"> <!--<![endif]-->
+<html class="no-js" lang="{$lang}">
 <head>
     <meta charset="{$head_charset}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,9 +14,6 @@
     <link rel="pingback" href="{$serendipityBaseURL}comment.php?type=pingback&amp;entry_id={$entry_id}">
 {/if}
 {serendipity_hookPlugin hook="frontend_header"}
-<!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
 </head>
 <body>
 {else}

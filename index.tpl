@@ -36,7 +36,7 @@
 
     <footer>
         <span class="sys" lang="en">Powered by <a href="http://s9y.org">Serendipity</a></span>
-        <span class="tpl" lang="en">Template</span> by <a href="http://netzgestaltung.net">Matthias Mees</a></span>
+        <span class="tpl" lang="en">Template by <a href="http://netzgestaltung.net">Matthias Mees</a></span>
     </footer>
 
     <script src="{serendipity_getFile file="scripts/master.js"}"></script>

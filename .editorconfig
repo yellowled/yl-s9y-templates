@@ -8,3 +8,6 @@ end_of_line = lf
 charset = latin1
 trim_trailing_whitespace = true
 insert_final_newline = false
+
+[UTF-8/*]
+charset = utf-8

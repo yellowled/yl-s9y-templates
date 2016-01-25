@@ -6,7 +6,7 @@
         <header>
             <h2><a href="{$entry.link}">{$entry.title}</a></h2>
 
-            <span class="byline">{$CONST.POSTED_BY} <a href="{$entry.link_author}">{$entry.author}</a> {$CONST.ON} <time datetime="{$entry.timestamp|serendipity_html5time}">{$entry.timestamp|formatTime:$template_option.date_format}</time></span>
+            <p class="byline">{$CONST.POSTED_BY} <a href="{$entry.link_author}">{$entry.author}</a> {$CONST.ON} <time datetime="{$entry.timestamp|serendipity_html5time}">{$entry.timestamp|formatTime:$template_option.date_format}</time></p>
         </header>
 
         <div class="content">
@@ -49,13 +49,13 @@
         <p class="serendipity_msg_notice">{$CONST.DATA_UNSUBSCRIBED|sprintf:$CONST.UNSUBSCRIBE_OK}</p>
     {/if}
     {if $CONST.DATA_TRACKBACK_DELETED}
-        <p class="serendipity_msg_notice">{$CONST.DATA_TRACKBACK_DELETED|sprintf:$CONST.TRACKBACK_DELETED}</p>
+        <p class="serendipity_msg_important">{$CONST.DATA_TRACKBACK_DELETED|sprintf:$CONST.TRACKBACK_DELETED}</p>
     {/if}
     {if $CONST.DATA_TRACKBACK_APPROVED}
         <p class="serendipity_msg_notice">{$CONST.DATA_TRACKBACK_APPROVED|sprintf:$CONST.TRACKBACK_APPROVED}</p>
     {/if}
     {if $CONST.DATA_COMMENT_DELETED}
-        <p class="serendipity_msg_notice">{$CONST.DATA_COMMENT_DELETED|sprintf:$CONST.COMMENT_DELETED}</p>
+        <p class="serendipity_msg_important">{$CONST.DATA_COMMENT_DELETED|sprintf:$CONST.COMMENT_DELETED}</p>
     {/if}
     {if $CONST.DATA_COMMENT_APPROVED}
         <p class="serendipity_msg_notice">{$CONST.DATA_COMMENT_APPROVED|sprintf:$CONST.COMMENT_APPROVED}</p>
@@ -72,7 +72,7 @@
     <section id="comments">
         <h3>{$CONST.COMMENTS}</h3>
 
-        <span class="comment_view">{$CONST.DISPLAY_COMMENTS_AS} {if $entry.viewmode eq $CONST.VIEWMODE_LINEAR}{$CONST.COMMENTS_VIEWMODE_LINEAR} | <a href="{$entry.link_viewmode_threaded}#comments" rel="nofollow">{$CONST.COMMENTS_VIEWMODE_THREADED}</a>{else}<a rel="nofollow" href="{$entry.link_viewmode_linear}#comments">{$CONST.COMMENTS_VIEWMODE_LINEAR}</a> | {$CONST.COMMENTS_VIEWMODE_THREADED}{/if}</span>
+        <div class="comment_view">{$CONST.DISPLAY_COMMENTS_AS} {if $entry.viewmode eq $CONST.VIEWMODE_LINEAR}{$CONST.COMMENTS_VIEWMODE_LINEAR} | <a href="{$entry.link_viewmode_threaded}#comments" rel="nofollow">{$CONST.COMMENTS_VIEWMODE_THREADED}</a>{else}<a rel="nofollow" href="{$entry.link_viewmode_linear}#comments">{$CONST.COMMENTS_VIEWMODE_LINEAR}</a> | {$CONST.COMMENTS_VIEWMODE_THREADED}{/if}</div>
 
         {serendipity_printComments entry=$entry.id mode=$entry.viewmode}
     {if $entry.is_entry_owner}
@@ -91,7 +91,7 @@
     {if $is_comment_added}
     <p class="serendipity_msg_notice">{$CONST.COMMENT_ADDED}</p>
     {elseif $is_comment_moderate}
-    <p class="serendipity_msg_notice">{$CONST.COMMENT_ADDED}{$CONST.THIS_COMMENT_NEEDS_REVIEW}</p>
+    <p class="serendipity_msg_important">{$CONST.COMMENT_ADDED}{$CONST.THIS_COMMENT_NEEDS_REVIEW}</p>
     {elseif not $entry.allow_comments}
     <p class="serendipity_msg_important">{$CONST.COMMENTS_CLOSED}</p>
     {else}
@@ -112,11 +112,15 @@
 {if not $is_preview}
     {if $staticpage_pagetitle == ''}
     <nav class="pagination">
-        <h2>{$footer_info}</h2>
-    {if $footer_prev_page||$footer_next_page}
+        <p>{$footer_info}</p>
+    {if $footer_prev_page || $footer_next_page}
         <ul>
-            <li class="prev_page">{if $footer_prev_page}<a href="{$footer_prev_page}">{$CONST.PREVIOUS_PAGE}</a>{else}<span>{$CONST.NO_ENTRIES_TO_PRINT}</span>{/if}</li>
-            <li class="next_page">{if $footer_next_page}<a href="{$footer_next_page}">{$CONST.NEXT_PAGE}</a>{else}<span>{$CONST.NO_ENTRIES_TO_PRINT}</span>{/if}</li>
+        {if $footer_prev_page}
+            <li class="prev_page"><a href="{$footer_prev_page}">{$CONST.PREVIOUS_PAGE}</a></li>
+        {/if}
+        {if $footer_next_page}
+            <li class="next_page"><a href="{$footer_next_page}">{$CONST.NEXT_PAGE}</a></li>
+        {/if}
         </ul>
     {/if}
     </nav>

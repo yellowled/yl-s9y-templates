@@ -2,7 +2,7 @@
 {foreach from=$entries item="dategroup"}
     {foreach from=$dategroup.entries item="entry"}
     {assign var="entry" value=$entry scope=parent}
-    <article class="post{if $dategroup.is_sticky} is_sticky{/if}">
+    <article class="post{if $dategroup.is_sticky} post_sticky{/if}">
         <header>
             <h2><a href="{$entry.link}">{$entry.title}</a></h2>
 
@@ -63,7 +63,7 @@
     <section id="trackbacks">
         <h3>{$CONST.TRACKBACKS}</h3>
 
-        <a class="trackback-url" rel="nofollow" href="{$entry.link_trackback}" onclick="alert('{$CONST.TRACKBACK_SPECIFIC_ON_CLICK|escape:'htmlall'}'); return false;" title="{$CONST.TRACKBACK_SPECIFIC_ON_CLICK|escape:'htmlall'}">{$CONST.TRACKBACK_SPECIFIC}</a>
+        <a class="trackback_url" rel="nofollow" href="{$entry.link_trackback}" onclick="alert('{$CONST.TRACKBACK_SPECIFIC_ON_CLICK|escape:'htmlall'}'); return false;" title="{$CONST.TRACKBACK_SPECIFIC_ON_CLICK|escape:'htmlall'}">{$CONST.TRACKBACK_SPECIFIC}</a>
 
         {serendipity_printTrackbacks entry=$entry.id}
     </section>
@@ -111,15 +111,15 @@
 {/foreach}
 {if not $is_preview}
     {if $staticpage_pagetitle == ''}
-    <nav class="pagination">
+    <nav class="pager">
         <p>{$footer_info}</p>
     {if $footer_prev_page || $footer_next_page}
         <ul>
         {if $footer_prev_page}
-            <li class="prev_page"><a href="{$footer_prev_page}">{$CONST.PREVIOUS_PAGE}</a></li>
+            <li class="pager_prev"><a href="{$footer_prev_page}">{$CONST.PREVIOUS_PAGE}</a></li>
         {/if}
         {if $footer_next_page}
-            <li class="next_page"><a href="{$footer_next_page}">{$CONST.NEXT_PAGE}</a></li>
+            <li class="pager_next"><a href="{$footer_next_page}">{$CONST.NEXT_PAGE}</a></li>
         {/if}
         </ul>
     {/if}

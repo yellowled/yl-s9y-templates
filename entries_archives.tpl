@@ -1,7 +1,6 @@
 {serendipity_hookPlugin hook="entries_header"}
 <article class="archive archive-overview">
     <h2>{$CONST.ARCHIVES}</h2>
-
 {foreach from=$archives item="archive"}
     <section class="archive-year">
         <h3>{$archive.year}</h3>

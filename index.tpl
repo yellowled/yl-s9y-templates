@@ -40,8 +40,8 @@
 
     <footer>
         <ul>
-            <li class="sys" lang="en">Powered by <a href="http://s9y.org">Serendipity</a></li>
-            <li class="tpl" lang="en">Template by <a href="http://netzgestaltung.net">Matthias Mees</a></li>
+            <li>Powered by <a href="http://s9y.org">Serendipity</a></li>
+            <li>Template by <a href="http://netzgestaltung.net">Matthias Mees</a></li>
         </ul>
     </footer>
 

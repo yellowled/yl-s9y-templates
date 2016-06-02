@@ -31,7 +31,6 @@
             <label for="serendipity_commentform_comment">{$CONST.COMMENT}</label>
             <textarea id="serendipity_commentform_comment" rows="10" name="serendipity[comment]">{$commentform_data}</textarea>
         </div>
-
         {serendipity_hookPlugin hook="frontend_comment" data=$commentform_entry}
     {if $is_commentform_showToolbar}
         <div class="form_check">
@@ -44,8 +43,8 @@
         {/if}
     {/if}
         <div class="form_buttons">
-            <input id="serendipity_submit" type="submit" name="serendipity[submit]" value="{$CONST.SUBMIT_COMMENT}">
             <input id="serendipity_preview" type="submit" name="serendipity[preview]" value="{$CONST.PREVIEW}">
+            <input id="serendipity_submit" type="submit" name="serendipity[submit]" value="{$CONST.SUBMIT_COMMENT}">
         </div>
     </form>
 </div>

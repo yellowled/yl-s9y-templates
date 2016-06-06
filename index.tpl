@@ -20,25 +20,26 @@
 {serendipity_hookPlugin hook="frontend_header"}
 {/if}
 {if $is_raw_mode != true}
-    <header>
+    <header role="banner">
         <h1><a href="{$serendipityBaseURL}">{$blogTitle}</a></h1>
+
         <p>{$blogDescription}</p>
     </header>
     {if $template_option.use_corenav}
-    <nav>
+    <nav role="navigation">
         <ul>{foreach from=$navlinks item="navlink" name="sbnav"}{if $navlink.title!=""&&$navlink.href!=""}<li>{if $currpage==$navlink.href or $currpage2==$navlink.href}<span>{else}<a href="{$navlink.href}">{/if}{$navlink.title}{if $currpage==$navlink.href or $currpage2==$navlink.href}</span>{else}</a>{/if}</li>{/if}{/foreach}</ul>
     </nav>
     {/if}
-    <main>
+    <main role="main">
     {$CONTENT}
     </main>
 
-    <aside>
+    <aside role="complementary">
     {if $leftSidebarElements > 0}{serendipity_printSidebar side="left"}{/if}
     {if $rightSidebarElements > 0}{serendipity_printSidebar side="right"}{/if}
     </aside>
 
-    <footer>
+    <footer role="contentinfo">
         <ul>
             <li>Powered by <a href="http://s9y.org">Serendipity</a></li>
             <li>Template by <a href="http://netzgestaltung.net">Matthias Mees</a></li>

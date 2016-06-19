@@ -27,14 +27,8 @@
 {/if}
 {if $staticpage_author or $staticpage_lastchange}
     <footer class="page_info">
-        <ul>
-        {if $staticpage_author}
-            <li>{$CONST.POSTED_BY} {$staticpage_author|escape}</li>
-        {/if}
-        {if $staticpage_lastchange}
-            <li>{$CONST.ON} <time datetime="{$staticpage_lastchange|serendipity_html5time}">{$staticpage_lastchange|date_format:$template_option.date_format}</time></li>
-        {/if}
-        </ul>
+        <p>{if $staticpage_author}{$CONST.POSTED_BY} {$staticpage_author|escape}{/if}
+        {if $staticpage_lastchange} {$CONST.ON} <time datetime="{$staticpage_lastchange|serendipity_html5time}">{$staticpage_lastchange|date_format:$template_option.date_format}</time>{/if}</p>
     </footer>
 {/if}
 </article>

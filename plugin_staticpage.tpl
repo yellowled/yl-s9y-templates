@@ -15,12 +15,12 @@
     </form>
 {else}
     {if $staticpage_precontent}
-    <div class="content preface">
+    <div class="page_content page_preface">
     {$staticpage_precontent}
     </div>
     {/if}
     {if $staticpage_content}
-    <div class="content">
+    <div class="page_content">
     {$staticpage_content}
     </div>
     {/if}

@@ -23,7 +23,7 @@ window.onload = function() {ldelim}
 </head>
 <body style="padding: 0; margin: 0;">
     <div id="main" style="padding: 0; margin: 0 auto; width: 98%;">
-        <main>
+        <main role="main">
         {$preview}
         </main>
     </div>

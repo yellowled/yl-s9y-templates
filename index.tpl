@@ -51,9 +51,9 @@
     </aside>
 
     <footer role="contentinfo">
-        <ul>
-            <li>Powered by <a href="http://s9y.org">Serendipity</a></li>
-            <li>Template by <a href="http://netzgestaltung.net">Matthias Mees</a></li>
+        <ul class="credits">
+            <li class="credits_blog">Powered by <a href="http://s9y.org">Serendipity</a></li>
+            <li class="credits_theme">Theme by <a href="http://netzgestaltung.net">Matthias Mees</a></li>
         </ul>
     </footer>
 

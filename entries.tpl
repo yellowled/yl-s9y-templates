@@ -22,13 +22,16 @@
         </div>
         {/if}
 
-        <footer>
-        {if $entry.categories}
-            <span class="post_category_label">{$CONST.CATEGORIES}: </span>{foreach from=$entry.categories item="entry_category" name="categories"}<a class="post_category" href="{$entry_category.category_link}">{$entry_category.category_name|escape}</a>{if not $smarty.foreach.categories.last}, {/if}{/foreach}
-        {/if}
-        {if $entry.categories and $entry.has_comments} | {/if}
-        {if $entry.has_comments}
-            <a class="post_comments" href="{$entry.link}#comments" title="{$entry.comments} {$entry.label_comments}{if $entry.has_trackbacks}, {$entry.trackbacks} {$entry.label_trackbacks}{/if}">{$entry.comments} {$entry.label_comments}</a>
+        <footer class="post_info">
+        {if $entry.categories or $entry.has_comments}
+            <ul class="post_meta">
+            {if $entry.categories}
+                <li class="post_category"><span>{$CONST.CATEGORIES}: </span>{foreach from=$entry.categories item="entry_category" name="categories"}<a class="post_category" href="{$entry_category.category_link}">{$entry_category.category_name|escape}</a>{if not $smarty.foreach.categories.last}, {/if}{/foreach}</li>
+            {/if}
+            {if $entry.has_comments}
+                <li class="post_comments"><a href="{$entry.link}#comments" title="{$entry.comments} {$entry.label_comments}{if $entry.has_trackbacks}, {$entry.trackbacks} {$entry.label_trackbacks}{/if}">{$entry.comments} {$entry.label_comments}</a></li>
+            {/if}
+            </ul>
         {/if}
             {$entry.add_footer}
             {$entry.plugin_display_dat}

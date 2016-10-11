@@ -115,7 +115,7 @@
 {if not $is_preview}
     {if $staticpage_pagetitle == ''}
     <nav class="pager" role="navigation">
-        <p class="pager_info">{$footer_info}</p>
+        <p>{$footer_info}</p>
     {if $footer_prev_page || $footer_next_page}
         <ul>
         {if $footer_prev_page}

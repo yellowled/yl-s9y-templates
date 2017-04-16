@@ -51,7 +51,7 @@
     </aside>
 
     <footer role="contentinfo">
-        <ul class="credits">
+        <ul class="credits plainList">
             <li class="credits_blog">Powered by <a href="http://s9y.org">Serendipity</a></li>
             <li class="credits_theme">Theme by <a href="http://netzgestaltung.net">Matthias Mees</a></li>
         </ul>

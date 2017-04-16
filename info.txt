@@ -1,4 +1,4 @@
 Name: THEME NAME
 Author: Matthias Mees
-Date: 2016-MM-DD
+Date: 2017-MM-DD
 Require Serendipity: 2.0

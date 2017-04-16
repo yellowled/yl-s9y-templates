@@ -24,7 +24,7 @@
 
         <footer class="post_info">
         {if $entry.categories or $entry.has_comments}
-            <ul class="post_meta">
+            <ul class="plainList">
             {if $entry.categories}
                 <li class="post_category"><span>{$CONST.CATEGORIES}: </span>{foreach from=$entry.categories item="entry_category" name="categories"}<a class="post_category" href="{$entry_category.category_link}">{$entry_category.category_name|escape}</a>{if not $smarty.foreach.categories.last}, {/if}{/foreach}</li>
             {/if}
@@ -66,7 +66,7 @@
     <section id="trackbacks">
         <h3>{$CONST.TRACKBACKS}</h3>
 
-        <a class="trackback_url" rel="nofollow" href="{$entry.link_trackback}" onclick="alert('{$CONST.TRACKBACK_SPECIFIC_ON_CLICK|escape:'htmlall'}'); return false;" title="{$CONST.TRACKBACK_SPECIFIC_ON_CLICK|escape:'htmlall'}">{$CONST.TRACKBACK_SPECIFIC}</a>
+        <a id="trackback_url" rel="nofollow" href="{$entry.link_trackback}" onclick="alert('{$CONST.TRACKBACK_SPECIFIC_ON_CLICK|escape:'htmlall'}'); return false;" title="{$CONST.TRACKBACK_SPECIFIC_ON_CLICK|escape:'htmlall'}">{$CONST.TRACKBACK_SPECIFIC}</a>
 
         {serendipity_printTrackbacks entry=$entry.id}
     </section>

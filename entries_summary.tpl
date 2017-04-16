@@ -5,7 +5,7 @@
 	<dl>
 	{foreach from=$entries item="sentries"}
         {foreach from=$sentries.entries item="entry"}
-        <dt><a class="archive_title" href="{$entry.link}">{$entry.title}</a></dt>
+        <dt><a href="{$entry.link}">{$entry.title}</a></dt>
         <dd>{$CONST.POSTED_BY} <a href="{$entry.link_author}">{$entry.author}</a> {$CONST.ON} <time datetime="{$entry.timestamp|serendipity_html5time}">{$entry.timestamp|formatTime:$template_option.date_format}</time></dd>
         {/foreach}
     {/foreach}

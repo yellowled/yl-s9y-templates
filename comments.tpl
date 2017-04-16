@@ -1,5 +1,6 @@
+<ol class="plainList">
 {foreach from=$comments item=comment name="comments"}
-    <article id="c{$comment.id}" class="comment commentlevel_{if $comment.depth > 8}9{else}{$comment.depth}{/if}">
+    <li id="c{$comment.id}" class="comment commentlevel_{if $comment.depth > 8}9{else}{$comment.depth}{/if}">
         <h4>{if $comment.url}<a href="{$comment.url}">{/if}{$comment.author|default:$CONST.ANONYMOUS}{if $comment.url}</a>{/if} {$CONST.ON} <time datetime="{$comment.timestamp|serendipity_html5time}">{$comment.timestamp|formatTime:$template_option.date_format}</time>:</h4>
 
         <div class="comment_content">
@@ -13,7 +14,8 @@
         <a id="serendipity_reply_{$comment.id}" class="comment_reply" href="#serendipity_CommentForm" onclick="document.getElementById('serendipity_replyTo').value='{$comment.id}'; {$comment_onchange}">{$CONST.REPLY}</a>
         <div id="serendipity_replyform_{$comment.id}"></div>
     {/if}
-    </article>
+    </li>
 {foreachelse}
-    <p class="serendipity_msg_notice">{$CONST.NO_COMMENTS}</p>
+    <li>{$CONST.NO_COMMENTS}</li>
 {/foreach}
+</ol>

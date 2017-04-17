@@ -1,0 +1,42 @@
+{
+    "name":         "yl-s9y-templates",
+    "description":  "Stripped-down, bare-bones HTML5 templates for s9y",
+    "version":      "1.0.0",
+    "homepage":     "https://github.com/yellowled/yl-s9y-templates",
+    "author": {
+        "name":     "Matthias Mees",
+        "url":      "http://yellowled.de"
+    },
+    "license":      "MIT",
+    "repository": {
+        "type":     "git",
+        "url":      "git@github.com:yellowled/yl-s9y-templates.git"
+    },
+    "bugs": {
+        "url":      "https://github.com/yellowled/yl-s9y-templates/issues"
+    },
+    "engines": {
+        "node":     ">=4.0.0"
+    },
+    "dependencies": {
+        "node-normalize-scss":      "^1.4.0",
+        "svg4everybody":            "^2.1.7"
+    },
+    "devDependencies":  {
+        "autoprefixer":             "^6.7.7",
+        "css-mqpacker":             "^5.0.1",
+        "cssnano":                  "^3.10.0",
+        "del":                      "^2.2.2",
+        "gulp":                     "^3.9.1",
+        "gulp-concat":              "^2.6.1",
+        "gulp-copy":                "^1.0.0",
+        "gulp-postcss":             "^6.4.0",
+        "gulp-sass":                "^3.1.0",
+        "gulp-svgmin":              "^1.2.3",
+        "gulp-svgstore":            "^6.1.0",
+        "gulp-uglify":              "^2.1.2",
+        "path":                     "^0.12.7",
+        "pixrem":                   "^3.0.2",
+        "postcss-flexbugs-fixes":   "^2.1.1"
+    }
+}

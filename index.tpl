@@ -54,7 +54,7 @@
         <p>Powered by <a href="http://s9y.org">Serendipity</a></p>
     </footer>
 
-    <script src="{serendipity_getFile file="scripts/master.js"}"></script>
+    <script src="{serendipity_getFile file="theme.js"}"></script>
 {/if}
 {$raw_data}
 {serendipity_hookPlugin hook="frontend_footer"}

@@ -9,5 +9,11 @@ charset = latin1
 trim_trailing_whitespace = true
 insert_final_newline = false
 
+[scss/**/*]
+charset = utf-8
+
+[dist/*.css]
+charset = utf-8
+
 [UTF-8/*]
 charset = utf-8

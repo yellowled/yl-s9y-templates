@@ -40,6 +40,6 @@
         </div>
     </main>
 
-    <script src="{serendipity_getFile file="scripts/master.js" frontend=true}"></script>
+    <script src="{serendipity_getFile file="theme.js" frontend=true}"></script>
 </body>
 </html>

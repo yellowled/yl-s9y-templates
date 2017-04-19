@@ -2,3 +2,5 @@ Name: THEME NAME
 Author: Matthias Mees
 Date: 2017-MM-DD
 Require Serendipity: 2.0
+Backend: No
+Recommended: Yes

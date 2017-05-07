@@ -19,18 +19,18 @@
         "node":     ">=4.0.0"
     },
     "dependencies": {
-        "node-normalize-scss":      "^2.0.0",
+        "node-normalize-scss":      "^3.0.0",
         "svg4everybody":            "^2.1.7"
     },
     "devDependencies":  {
-        "autoprefixer":             "^6.7.7",
-        "css-mqpacker":             "^5.0.1",
+        "autoprefixer":             "^7.0.0",
+        "css-mqpacker":             "^6.0.0",
         "cssnano":                  "^3.10.0",
         "del":                      "^2.2.2",
         "gulp":                     "^3.9.1",
         "gulp-concat":              "^2.6.1",
         "gulp-copy":                "^1.0.0",
-        "gulp-postcss":             "^6.4.0",
+        "gulp-postcss":             "^7.0.0",
         "gulp-sass":                "^3.1.0",
         "gulp-svgmin":              "^1.2.3",
         "gulp-svgstore":            "^6.1.0",

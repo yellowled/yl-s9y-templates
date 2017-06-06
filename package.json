@@ -20,7 +20,7 @@
     },
     "dependencies": {
         "node-normalize-scss": "^3.0.0",
-        "svg4everybody": "^2.1.7"
+        "svg4everybody": "^2.1.8"
     },
     "devDependencies": {
         "autoprefixer": "^7.1.1",

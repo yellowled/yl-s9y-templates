@@ -16,7 +16,7 @@
 </script>
 </head>
 <body>
-    <main role="main">
+    <main>
     {if $mode == 'preview'}
         <div class="clearfix">
     {elseif $mode == 'save'}

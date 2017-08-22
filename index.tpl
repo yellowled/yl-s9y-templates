@@ -31,26 +31,26 @@
 {serendipity_hookPlugin hook="frontend_header"}
 {/if}
 {if $is_raw_mode != true}
-    <header role="banner">
+    <header>
         <h1><a href="{$serendipityBaseURL}">{$blogTitle}</a></h1>
 
         <p>{$blogDescription}</p>
     </header>
     {if $template_option.use_corenav}
-    <nav role="navigation">
+    <nav>
         <ul>{foreach from=$navlinks item="navlink" name="sbnav"}{if $navlink.title!=""&&$navlink.href!=""}<li>{if $currpage==$navlink.href or $currpage2==$navlink.href}<span>{else}<a href="{$navlink.href}">{/if}{$navlink.title}{if $currpage==$navlink.href or $currpage2==$navlink.href}</span>{else}</a>{/if}</li>{/if}{/foreach}</ul>
     </nav>
     {/if}
-    <main role="main">
+    <main>
     {$CONTENT}
     </main>
 
-    <aside role="complementary">
+    <aside>
     {if $leftSidebarElements > 0}{serendipity_printSidebar side="left"}{/if}
     {if $rightSidebarElements > 0}{serendipity_printSidebar side="right"}{/if}
     </aside>
 
-    <footer role="contentinfo">
+    <footer>
         <p>Powered by <a href="http://s9y.org">Serendipity</a></p>
     </footer>
 

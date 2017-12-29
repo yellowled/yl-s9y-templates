@@ -16,7 +16,7 @@
         "url": "https://github.com/yellowled/yl-s9y-templates/issues"
     },
     "engines": {
-        "node": ">=4.0.0"
+        "node": ">=8.0.0"
     },
     "dependencies": {
         "node-normalize-scss": "~3.0.0",

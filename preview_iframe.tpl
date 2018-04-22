@@ -1,4 +1,3 @@
-{if $is_embedded != true}
 <!DOCTYPE html>
 <html class="no-js" lang="{$lang}">
 <head>

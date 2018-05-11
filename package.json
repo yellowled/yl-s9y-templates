@@ -19,24 +19,24 @@
         "node": ">=8.0.0"
     },
     "dependencies": {
-        "node-normalize-scss": "~3.0.0",
-        "svg4everybody": "~2.1.9"
+        "node-normalize-scss": "^8.0.0",
+        "svg4everybody": "^2.1.9"
     },
     "devDependencies": {
-        "autoprefixer": "~8.4.1",
-        "css-mqpacker": "~6.0.2",
-        "cssnano": "~3.10.0",
-        "del": "~3.0.0",
-        "gulp": "~3.9.1",
-        "gulp-concat": "~2.6.1",
-        "gulp-copy": "~1.1.0",
-        "gulp-postcss": "~7.0.1",
-        "gulp-sass": "~4.0.1",
-        "gulp-svgmin": "~1.2.4",
-        "gulp-svgstore": "~6.1.1",
-        "gulp-uglify": "~3.0.0",
-        "path": "~0.12.7",
-        "pixrem": "~4.0.1",
-        "postcss-flexbugs-fixes": "~3.3.1"
+        "autoprefixer": "^8.4.1",
+        "css-mqpacker": "^6.0.2",
+        "cssnano": "^3.10.0",
+        "del": "^3.0.0",
+        "gulp": "^3.9.1",
+        "gulp-concat": "^2.6.1",
+        "gulp-copy": "^1.1.0",
+        "gulp-postcss": "^7.0.1",
+        "gulp-sass": "^4.0.1",
+        "gulp-svgmin": "^1.2.4",
+        "gulp-svgstore": "^6.1.1",
+        "gulp-uglify": "^3.0.0",
+        "path": "^0.12.7",
+        "pixrem": "^4.0.1",
+        "postcss-flexbugs-fixes": "^3.3.1"
     }
 }

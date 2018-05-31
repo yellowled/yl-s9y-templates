@@ -6,3 +6,5 @@ node_modules/
 
 # Generated
 dist/
+style.css
+style.css.map

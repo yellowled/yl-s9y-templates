@@ -46,7 +46,7 @@
         "postcss-cli": "^5.0.0",
         "postcss-flexbugs-fixes": "^3.3.1",
         "rimraf": "^2.6.2",
-        "svg-sprite-generator": "0.0.7",
+        "svg-sprite-generator": "^0.0.7",
         "svgo": "^1.0.5",
         "uglify-js": "^3.3.28"
     }

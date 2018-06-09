@@ -1,11 +1,11 @@
 {
     "name": "yl-s9y-templates",
     "description": "Stripped-down, bare-bones HTML5 templates for s9y",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "homepage": "https://github.com/yellowled/yl-s9y-templates",
     "author": {
         "name": "Matthias Mees",
-        "url": "http://yellowled.de"
+        "url": "https://yellowled.de"
     },
     "license": "MIT",
     "repository": {
@@ -37,7 +37,7 @@
         "svg4everybody": "^2.1.9"
     },
     "devDependencies": {
-        "autoprefixer": "^8.5.2",
+        "autoprefixer": "^8.6.2",
         "clean-css-cli": "^4.1.11",
         "copy": "^0.3.2",
         "mkdirp": "^0.5.1",
@@ -48,6 +48,6 @@
         "rimraf": "^2.6.2",
         "svg-sprite-generator": "^0.0.7",
         "svgo": "^1.0.5",
-        "uglify-js": "^3.3.28"
+        "uglify-js": "^3.4.0"
     }
 }

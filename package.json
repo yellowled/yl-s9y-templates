@@ -37,7 +37,7 @@
         "svg4everybody": "^2.1.9"
     },
     "devDependencies": {
-        "autoprefixer": "^9.0.0",
+        "autoprefixer": "^9.0.1",
         "clean-css-cli": "^4.1.11",
         "copyfiles": "^2.0.0",
         "mkdirp": "^0.5.1",
@@ -48,6 +48,6 @@
         "rimraf": "^2.6.2",
         "svg-sprite-generator": "^0.0.7",
         "svgo": "^1.0.5",
-        "uglify-js": "^3.4.5"
+        "uglify-js": "^3.4.6"
     }
 }

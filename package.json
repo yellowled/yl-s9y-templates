@@ -37,9 +37,9 @@
         "svg4everybody": "^2.1.9"
     },
     "devDependencies": {
-        "autoprefixer": "^9.1.1",
+        "autoprefixer": "^9.1.5",
         "clean-css-cli": "^4.2.1",
-        "copyfiles": "^2.0.0",
+        "copyfiles": "^2.1.0",
         "del-cli": "^1.1.0",
         "mkdirp": "^0.5.1",
         "node-sass": "^4.9.3",
@@ -48,6 +48,6 @@
         "postcss-flexbugs-fixes": "^4.1.0",
         "svg-sprite-generator": "^0.0.7",
         "svgo": "^1.0.5",
-        "uglify-js": "^3.4.7"
+        "uglify-js": "^3.4.9"
     }
 }

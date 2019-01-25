@@ -37,7 +37,7 @@
         "svg4everybody": "^2.1.9"
     },
     "devDependencies": {
-        "autoprefixer": "^9.4.5",
+        "autoprefixer": "^9.4.6",
         "clean-css-cli": "^4.2.1",
         "copyfiles": "^2.1.0",
         "del-cli": "^1.1.0",

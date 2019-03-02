@@ -16,7 +16,7 @@
         "url": "https://github.com/yellowled/yl-s9y-templates/issues"
     },
     "engines": {
-        "node": ">=8.0.0"
+        "node": ">=10.0.0"
     },
     "scripts": {
         "build": "run-s clean copy css:build js:build svg:build",

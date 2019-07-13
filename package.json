@@ -37,7 +37,7 @@
     },
     "devDependencies": {
         "autoprefixer": "^9.6.1",
-        "copyfiles": "^2.1.0",
+        "copyfiles": "^2.1.1",
         "cssnano": "^4.1.10",
         "del-cli": "^2.0.0",
         "mkdirp": "^0.5.1",

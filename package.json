@@ -32,7 +32,7 @@
         "svg:minify": "svgo --config=.svgorc dist/img/icons.svg -o dist/img/icons.svg"
     },
     "dependencies": {
-        "node-normalize-scss": "^8.0.0",
+        "node-normalize-scss": "^8.0.1",
         "svg4everybody": "^2.1.9"
     },
     "devDependencies": {

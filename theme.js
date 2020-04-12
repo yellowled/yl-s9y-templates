@@ -1,4 +1,3 @@
 (function ($) {
-    // SVG polyfill
-    svg4everybody();
+    // Here be dragons
 })(jQuery);
